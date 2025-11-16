@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Our Products</title>
+  <link rel="stylesheet" href="fg.css"> <!-- Reuse the same CSS -->
+</head>
+<body>
+
+  
+
+    <div class="cart">
+    <h2>Your Cart
+      <img id="cancelcart" srcset="" src="/F.O.G project/files/icons8-x-48.png" alt="">
+    </h2>
+    
+    
+    <div class="product"></div>
+    
+    <span class="totalprice">Total: N 0</span>
+    <button class="proceed" type="submit">
+      Proceed To Payment
+    </button>
+    <br />
+    
+    <span class="emptycart">Your cart is empty</span>
+    
+  </div>
+  <div class="carterror">
+    Product is Already on the Cart
+  </div>
+  <div class="cartsuccess">
+    Product has been added to Cart ✔
+    
+  </div>
+  <header>
+    <div class="header">
+      <div class="logo">
+        <a href="fg.html">
+          <img src="/file_0000000083d861fd8c3e4acbeb4c908f.png" alt="" width="50px">
+        </a>
+      </div>
+      <div class="ham">
+        <i class="cart-icon">
+          <img id="ham1" src="/F.O.G project/files/icons8-shopping-cart-30.png" alt="" width="25px">
+          <span class="cart-quantity"></span>
+        </i>
+        <i><img class="lactive" id="ham2" src="/F.O.G project/files/icons8-outdent-50 (1).png" alt="" width="25px"></i>
+        <i style="position: absolute; right: 5.9%;">
+          <img id="bad" src="/F.O.G project/files/icons8-x-48.png" alt="" width="20px">
+        </i>
+      </div>
+    </div>
+
+    <div id="links" class="links">
+      <ul>
+        <li><a href="fg.html#Home">Home</a></li>
+        <div>
+          <div class="categ">
+            <span id="cat" style="font-weight: bolder; color: grey; margin-left: 44px;">Categories</span>
+            <span id="triangle-down"></span>
+          </div>
+          <ul class="nona">
+            <li>Phones</li>
+            <li>Accessories</li>
+            <li>Earpods</li>
+            <li>Powerbanks</li>
+          </ul>
+        </div>
+        <li><a class="active" href="/F.O.G project/Products.html">Products & Services</a></li>
+        <li><a href="fg.html#Orders">Orders</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- Products Section Body -->
+  <main>
+    <section style= "padding: 5rem 0 0 0;" id="Products">
+      <h2>Products</h2>
+      <div class="Search-bar">
+        <input id ="searchInput" type="text" name="" value="" placeholder="Type In Search" />
+      </div>
+      <div class="products">
+        <div class="Latest">
+          <h4>Latest</h4>
+          <br />
+       
+        <div class="prod">
+          <img src="/F.O.G project/files/infinix-hot-60-tundra-green-official-image.jpeg" alt="">
+          <h3 class="product-title">Infinix Hot 60</h3>
+          <p>₦ 163,000</p>
+          <button class="addcart" type="submit">Add to Cart 🛒</button>
+        </div>
+        <div class="prod">
+          <img src="/F.O.G project/files/WhatsApp-Image-2025-05-05-at-12.35.25_5d211a68.jpg" alt="">
+          <h3 class="product-title">Itel City 100</h3>
+          <p>₦ 125,000</p>
+          <button class="addcart" type="submit">Add to Cart 🛒</button>
+        </div>
+        <div class="prod">
+          <img src="/F.O.G project/files/tecno-camon-40-galaxy-black-official-image_1.jpg" alt="">
+          <h3 class="product-title">Tecno Camon 40</h3>
+          <p>₦ 250,000</p>
+          <button class="addcart" type="submit">Add to Cart 🛒</button>
+        </div>
+        <div class="prod">
+          <img src="/F.O.G project/files/file_00000000b1bc620a842c77e0b92717f2.png" alt="">
+          <h3 class="product-title" >Itel Powerbank 27,000mah</h3>
+          <p>₦ 27,000</p>
+          <button class="addcart" type="submit">Add to Cart 🛒</button>
+        </div>
+       
+      </div>
+         <div class="prod">
+     <img src="/F.O.G project/files/tecno-camon-40-galaxy-black-official-image_1.jpg" alt="">
+     <h3 class="product-title">Tecno Camon 40</h3>
+     <p>₦ 250,000</p>
+     <button class="addcart" type="submit">Add to Cart 🛒</button>
+   </div>
+   <div class="prod">
+     <img src="/F.O.G project/files/file_00000000b11c51f8a0d8e140e9ece97d_conversation_id=67e8233c-f71c-8000-9454-f94eff6b32bd&message_id=96dd309d-1185-4150-9f24-c31e084de1eb.jpg" alt="">
+     <h3 class="product-title">Itel Storm Ultra</h3>
+     <p>₦ 22,499</p>
+     <button class="addcart" type="submit">Add to Cart 🛒</button>
+   </div>
+      </div>
+    </section>
+  </main>
+<!-- Firebase SDK -->
+<script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+  import { getFirestore, collection, getDocs } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
+  
+  const firebaseConfig = {
+    apiKey: "YOUR_API_KEY",
+    authDomain: "YOUR_AUTH_DOMAIN",
+    projectId: "YOUR_PROJECT_ID",
+    storageBucket: "YOUR_STORAGE_BUCKET",
+    messagingSenderId: "YOUR_MSG_ID",
+    appId: "YOUR_APP_ID"
+  };
+  
+  const app = initializeApp(firebaseConfig);
+  const db = getFirestore(app);
+  
+  // Reference to the "products" collection
+  const productsRef = collection(db, "products");
+  
+  const latestContainer = document.querySelector('.products .Latest');
+  
+  const displayProduct = (data) => {
+    const div = document.createElement("div");
+    div.classList.add("prod");
+    
+    div.innerHTML = `
+      <img src="${data.imageUrl}" alt="">
+      <h3 class="product-title">${data.name}</h3>
+      <p>₦ ${data.price}</p>
+      <button class="addcart" type="submit">Add to Cart 🛒</button>
+    `;
+    
+    latestContainer.appendChild(div);
+  };
+  
+  const loadProducts = async () => {
+    const snapshot = await getDocs(productsRef);
+    snapshot.forEach(doc => {
+      const data = doc.data();
+      displayProduct(data);
+    });
+  };
+  
+  window.addEventListener("DOMContentLoaded", loadProducts);
+</script>
+  <script defer src="Products.js"></script>
+</body>
+</html>
