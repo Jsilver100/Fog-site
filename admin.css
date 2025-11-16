@@ -1,0 +1,66 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f2f2f2;
+  margin: 0;
+  padding: 20px;
+}
+
+.admin-container {
+  max-width: 600px;
+  margin: auto;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+input, button {
+  padding: 10px;
+  font-size: 16px;
+}
+
+#productList {
+  margin-top: 20px;
+}
+
+.product-item {
+  background: #fafafa;
+  padding: 10px;
+  margin: 10px 0;
+  border-left: 4px solid #007bff;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.product-item img {
+  width: 100px;
+  margin-top: 5px;
+}
+
+.action-buttons {
+  margin-top: 10px;
+}
+
+.product-item button {
+  margin-right: 10px;
+  padding: 5px 10px;
+  cursor: pointer;
+  border: none;
+}
+
+.product-item .edit-btn {
+  background: orange;
+  color: white;
+}
+
+.product-item .delete-btn {
+  background: red;
+  color: white;
+}

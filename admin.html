@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Panel</title>
+  <link rel="stylesheet" href="admin.css" />
+  <script type="module" src="admin.js" defer></script>
+</head>
+<body>
+  <div class="admin-container">
+    <h1>Admin Product Panel</h1>
+    <form id="uploadForm">
+      <input type="text" id="productName" placeholder="Product Name" required />
+      <input type="text" id="productPrice" placeholder="Product Price" required />
+      <input type="url" id="productImage" placeholder="Image URL" required />
+      <button type="submit">Upload</button>
+    </form>
+    <div id="productList"></div>
+  </div>
+</body>
+</html>
